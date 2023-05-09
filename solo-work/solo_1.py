@@ -15,3 +15,12 @@ print("Hello {}".format(student))
 studenci = ["Basia", "Kasia", "Zosia", "Ola"]
 liczba_studentow = len(studenci)
 print("Liczba studentów: ", liczba_studentow)
+
+#zadanie 1.4
+
+studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
+
+for student in studenci:
+    print("Hello {}".format(student))
+
+
