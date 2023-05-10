@@ -63,6 +63,18 @@ print("Alfabetyczna lista studentów wynosi:")
 for student in sortowanie_po_nazwisku:
     print(student)
 
+#zadanie 1.9
+
+studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
+
+liczba_n = 0
+for student in studenci:
+    if student.split()[-1][0].lower() == "n":
+        liczba_n += 1
+
+print("Liczba studentów na N wynosi:", liczba_n)
+
+
 
 
 
