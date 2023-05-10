@@ -32,5 +32,18 @@ wynik = liczba ** potega
 
 print("Wynik wynosi: {}".format(wynik))
 
+#zadanie 1.6
+
+ciag_znakow = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
+
+licznik = 0
+for znak in ciag_znakow:
+    if znak == "(":
+        licznik += 1
+
+print("Liczba nawiasow otwierajacych wynosi: " + str(licznik))
+
+
+
 
 
