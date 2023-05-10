@@ -74,11 +74,47 @@ for student in studenci:
 
 print("Liczba studentów na N wynosi:", liczba_n)
 
+#zadanie 1.10
 
+wykres_1 = [[2, 4], [4, 4], [6, 4]]
+wykres_2 = [[2, 3], [4, 4], [6, 5]]
+wykres_3 = [[2, 3], [4, 3], [5, 4]]
 
+wykres_1_funkcja_liniowa = False
+wykres_2_funkcja_liniowa = False
+wykres_3_funkcja_liniowa = False
 
+def czy_funkcja_liniowa(wykres):
+    if len(wykres) <= 2:
+        return True
 
+    slope = None
+    for i in range(len(wykres) - 1):
+        x1, y1 = wykres[i]
+        x2, y2 = wykres[i + 1]
+        current_slope = (y2 - y1) / (x2 - x1)
+        if slope is None:
+            slope = current_slope
+        elif current_slope != slope:
+            return False
 
+    return True
 
+wykres_1_funkcja_liniowa = czy_funkcja_liniowa(wykres_1)
+wykres_2_funkcja_liniowa = czy_funkcja_liniowa(wykres_2)
+wykres_3_funkcja_liniowa = czy_funkcja_liniowa(wykres_3)
 
+if wykres_1_funkcja_liniowa:
+    print("Dla punktów w wykres_1 można wyznaczyć funkcję liniową.")
+else:
+    print("Dla punktów w wykres_1 nie można wyznaczyć funkcji liniowej.")
 
+if wykres_2_funkcja_liniowa:
+    print("Dla punktów w wykres_2 można wyznaczyć funkcję liniową.")
+else:
+    print("Dla punktów w wykres_2 nie można wyznaczyć funkcji liniowej.")
+
+if wykres_3_funkcja_liniowa:
+    print("Dla punktów w wykres_3 można wyznaczyć funkcję liniową.")
+else:
+    print("Dla punktów w wykres_3 nie można wyznaczyć funkcji liniowej.")
